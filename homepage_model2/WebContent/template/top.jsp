@@ -190,29 +190,51 @@
 					</header>
 					<ul>
 						<li><a href="${pageContext.request.contextPath }/index.jsp">Homepage</a></li>
+					<c:choose>
+						<c:when test="${empty sessionScope.id }">
 						<li><a href="${pageContext.request.contextPath }/member/agree.do">Join</a></li>
 						<li><a href="${pageContext.request.contextPath }/member/login.do">Login</a></li>
+					</c:when>
+						<c:when test="${not empty sessionScope.id && sessionScope.grade=='H'}">	
 						<li><span class="opener">Info</span>
 							<ul>
 								<li><a href="${pageContext.request.contextPath }/member/read.do">MyInfo</a></li>
 								<li><a href="${pageContext.request.contextPath }/member/update.do">Edit</a></li>
 								<li><a href="${pageContext.request.contextPath }/member/delete.do">Withdrawal</a></li>
 								<li><a href="${pageContext.request.contextPath }/member/logout.do">Logout</a></li>
+							</ul></li>
+							</c:when>
+					</c:choose>
+						<li><ul>
+								<c:if test="${not empty sessionScope.id && sessionScope.grade=='A'}">
 								<li><a href="${pageContext.request.contextPath }/admin/list.do" id="admin">Member</a></li>
 								<li><a href="${pageContext.request.contextPath }/member/logout.do">Logout</a></li>
+								</c:if>
 							</ul></li>
 						<li><span class="opener">Memo</span>
 							<ul>
-								<li><a href="${pageContext.request.contextPath }/memo/list.do">memo list</a></li>
-								<li><a href="${pageContext.request.contextPath }/memo/create.do">memo enroll</a></li>
+								<li><a href="${pageContext.request.contextPath }/memo/create.do">enroll</a></li>
+								<li><a href="${pageContext.request.contextPath }/memo/list.do">list</a></li>
 							</ul></li>
-						<li><span class="opener">Another Submenu</span>
+						<li><span class="opener">Address</span>
 							<ul>
-								<li><a href="#">Lorem Dolor</a></li>
+								<li><a href="${pageContext.request.contextPath }/address/create.do">enroll</a></li>
+								<li><a href="${pageContext.request.contextPath }/address/list.do">list</a></li>
 							</ul></li>
-						<li><span class="opener">Another Submenu</span>
+						<li><span class="opener">Board</span>
 							<ul>
-								<li><a href="#">Lorem Dolor</a></li>
+								<li><a href="${pageContext.request.contextPath }/bbs/create.do">enroll</a></li>
+								<li><a href="${pageContext.request.contextPath }/bbs/list.do">list</a></li>
+							</ul></li>
+						<li><span class="opener">Team</span>
+							<ul>
+								<li><a href="${pageContext.request.contextPath }/team/create.do">enroll</a></li>
+								<li><a href="${pageContext.request.contextPath }/team/list.do">list</a></li>
+							</ul></li>
+						<li><span class="opener">Image</span>
+							<ul>
+								<li><a href="${pageContext.request.contextPath }/imgbbs/create.do">enroll</a></li>
+								<li><a href="${pageContext.request.contextPath }/imgbbs/list.do">list</a></li>
 							</ul></li>
 					</ul>
 				</nav>
@@ -249,37 +271,20 @@
 					<header class="major">
 						<h2>Get in touch</h2>
 					</header>
-					<p>Sed varius enim lorem ullamcorper dolore aliquam aenean
-						ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin
-						sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
-						tempus aliquam.</p>
+					<p>Personal projects</p>
 					<ul class="contact">
-						<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
-						<li class="fa-phone">(000) 000-0000</li>
-						<li class="fa-home">1234 Somewhere Road #8254<br />
-							Nashville, TN 00000-0000
+						<li class="fa-envelope-o"><a href="#">skywldnjs21@google.co.kr</a></li>
+						<li class="fa-phone">010.8555.6744</li>
+						<li class="fa-home">soldesk<br />
 						</li>
 					</ul>
 				</section>
-
 				<!-- Footer -->
-				<footer id="footer">
-					<p class="copyright">
-						&copy; Untitled. All rights reserved. Demo Images: <a
-							href="https://unsplash.com">Unsplash</a>. Design: <a
-							href="https://html5up.net">HTML5 UP</a>.
-					</p>
-				</footer>
-
-			</div>
-		</div>
-
-	</div>
 	<!-- Scripts -->
 	<script src="${pageContext.request.contextPath }/assets/js/jquery.min.js"></script>
 	<script src="${pageContext.request.contextPath }/assets/js/skel.min.js"></script>
 	<script src="${pageContext.request.contextPath }/assets/js/util.js"></script>
 	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
 	<script src="${pageContext.request.contextPath }/assets/js/main.js"></script>
-</body>
-</html>
+
+

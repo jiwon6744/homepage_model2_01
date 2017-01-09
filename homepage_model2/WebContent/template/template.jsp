@@ -9,6 +9,7 @@
 <body leftmargin="0" topmargin="0">
 	<jsp:include page="./top.jsp"></jsp:include>
 	<jsp:include page="${CONTENT_PAGE }" flush="false" />
+	<jsp:include page="./bottom.jsp"></jsp:include>
 </body>
 </html>
 
