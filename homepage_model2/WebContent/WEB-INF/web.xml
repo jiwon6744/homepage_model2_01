@@ -30,7 +30,7 @@
 		<servlet-class>controller.Controller</servlet-class>
 		<init-param>
 			<param-name>configFile</param-name>
-			<param-value>D:/javadb/git/homepage_mode2_02/homepage_model2/mvc_blog/WebContent/WEB-INF/config/action-config.properties</param-value>
+			<param-value>D:/javadb/git/homepage_mode2_02/homepage_model2/WebContent/WEB-INF/config/action-config.properties</param-value>
 		</init-param>
 		<init-param>
 			<param-name>templatePage</param-name>
