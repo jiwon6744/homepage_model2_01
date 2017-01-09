@@ -25,7 +25,6 @@
 </head>
 <body>
 	<jsp:include page="/template/top.jsp" />
-	<div class="content" id="w">
 		<h3>${title }</h3><br><br>
 		<h3>${str }</h3><br><br>
 		<c:choose>
@@ -36,7 +35,5 @@
 				<input type="button" value="로그아웃" onclick="location.href='${pageContext.request.contextPath}/member/logout.do'" class="button">
 			</c:otherwise>
 		</c:choose>
-	</div>
-	<jsp:include page="/template/bottom.jsp" />
 </body>
 </html>

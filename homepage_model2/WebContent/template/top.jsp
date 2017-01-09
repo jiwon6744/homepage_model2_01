@@ -1,135 +1,285 @@
 <%@ page contentType="text/html; charset=UTF-8"%>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<c:choose>
-	<c:when test="${empty sessionScope.id }">
-		<c:set var="str">JIWON</c:set>
-	</c:when>
-	<c:when test="${not empty sessionScope.id && sessionScope.grade=='A' }">
-		<c:set var="str">관리자 님</c:set>
-	</c:when>
-	<c:otherwise>
-		<c:set var="str">${sessionScope.id } 님!</c:set>
-	</c:otherwise>
-</c:choose>
-<!DOCTYPE html>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
+<!DOCTYPE HTML>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <link rel="shortcut icon" href="${pageContext.request.contextPath }/assets/ico/favicon.png">
+<head>
+<title>Jiwon's Homepage</title>
+<meta charset="utf-8" />
+<meta name="viewport"
+	content="width=device-width, initial-scale=1, user-scalable=no" />
+<link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/main.css" />
+</head>
+<body>
+	<!-- Wrapper -->
+	<div id="wrapper">
+		<!-- Main -->
+		<div id="main">
+			<div class="inner">
+				<!-- Header -->
+				<header id="header">
+					<a href="index.html" class="logo"><strong>Homepage</strong> by
+						JIWON</a>
+					<ul class="icons">
+						<li><a href="#" class="icon fa-twitter"><span
+								class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon fa-facebook"><span
+								class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon fa-snapchat-ghost"><span
+								class="label">Snapchat</span></a></li>
+						<li><a href="#" class="icon fa-instagram"><span
+								class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon fa-medium"><span
+								class="label">Medium</span></a></li>
+					</ul>
+				</header>
+				<!-- Banner -->
+				<section id="banner">
+					<div class="content">
+						<header>
+							<h1>
+								Hi, I’m Editorial<br /> by HTML5 UP
+							</h1>
+							<p>A free and fully responsive site template</p>
+						</header>
+						<p>Aenean ornare velit lacus, ac varius enim ullamcorper eu.
+							Proin aliquam facilisis ante interdum congue. Integer mollis,
+							nisl amet convallis, porttitor magna ullamcorper, amet egestas
+							mauris. Ut magna finibus nisi nec lacinia. Nam maximus erat id
+							euismod egestas. Pellentesque sapien ac quam. Lorem ipsum dolor
+							sit nullam.</p>
+						<ul class="actions">
+							<li><a href="#" class="button big">Learn More</a></li>
+						</ul>
+					</div>
+					<span class="image object"> <img src="images/pic10.jpg"
+						alt="" />
+					</span>
+				</section>
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Erat lacinia</h2>
+					</header>
+					<div class="features">
+						<article>
+							<span class="icon fa-diamond"></span>
+							<div class="content">
+								<h3>Portitor ullamcorper</h3>
+								<p>Aenean ornare velit lacus, ac varius enim lorem
+									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+									nulla amet lorem feugiat tempus aliquam.</p>
+							</div>
+						</article>
+						<article>
+							<span class="icon fa-paper-plane"></span>
+							<div class="content">
+								<h3>Sapien veroeros</h3>
+								<p>Aenean ornare velit lacus, ac varius enim lorem
+									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+									nulla amet lorem feugiat tempus aliquam.</p>
+							</div>
+						</article>
+						<article>
+							<span class="icon fa-rocket"></span>
+							<div class="content">
+								<h3>Quam lorem ipsum</h3>
+								<p>Aenean ornare velit lacus, ac varius enim lorem
+									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+									nulla amet lorem feugiat tempus aliquam.</p>
+							</div>
+						</article>
+						<article>
+							<span class="icon fa-signal"></span>
+							<div class="content">
+								<h3>Sed magna finibus</h3>
+								<p>Aenean ornare velit lacus, ac varius enim lorem
+									ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+									nulla amet lorem feugiat tempus aliquam.</p>
+							</div>
+						</article>
+					</div>
+				</section>
 
-    <title>Jiwon`s MemoPage</title>
-    <!-- Bootstrap core CSS -->
-    <link href="${pageContext.request.contextPath }/assets/css/bootstrap.css" rel="stylesheet">
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Ipsum sed dolor</h2>
+					</header>
+					<div class="posts">
+						<article>
+							<a href="#" class="image"><img src="images/pic01.jpg" alt="" /></a>
+							<h3>Interdum aenean</h3>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+								nulla amet lorem feugiat tempus aliquam.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic02.jpg" alt="" /></a>
+							<h3>Nulla amet dolore</h3>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+								nulla amet lorem feugiat tempus aliquam.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic03.jpg" alt="" /></a>
+							<h3>Tempus ullamcorper</h3>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+								nulla amet lorem feugiat tempus aliquam.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic04.jpg" alt="" /></a>
+							<h3>Sed etiam facilis</h3>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+								nulla amet lorem feugiat tempus aliquam.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic05.jpg" alt="" /></a>
+							<h3>Feugiat lorem aenean</h3>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+								nulla amet lorem feugiat tempus aliquam.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic06.jpg" alt="" /></a>
+							<h3>Amet varius aliquam</h3>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore. Proin aliquam facilisis ante interdum. Sed
+								nulla amet lorem feugiat tempus aliquam.</p>
+							<ul class="actions">
+								<li><a href="#" class="button">More</a></li>
+							</ul>
+						</article>
+					</div>
+				</section>
 
-    <!-- Custom styles for this template -->
-    <link href="${pageContext.request.contextPath }/assets/css/main.css" rel="stylesheet">
-	<link rel="stylesheet" href="${pageContext.request.contextPath }/assets/css/font-awesome.min.css">
-
-    <script src="${pageContext.request.contextPath }/assets/js/jquery.min.js"></script>
-	<script src="${pageContext.request.contextPath }/assets/js/Chart.js"></script>
-	<script src="${pageContext.request.contextPath }/assets/js/modernizr.custom.js"></script>
-	
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Raleway:400,300,700' rel='stylesheet' type='text/css'>
-
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="assets/js/html5shiv.js"></script>
-      <script src="assets/js/respond.min.js"></script>
-    <![endif]-->
-    <style type="text/css">
-    #admin {
-    		font-weight: bold;
-		}
-	</style>
-  </head>
-
-  <body data-spy="scroll" data-offset="0" data-target="#theMenu">
-		
-	<!-- Menu -->
-	<nav class="menu" id="theMenu">
-		<div class="menu-wrap">
-			<h1 class="logo"><a href="#home">
-			${str }
-			</a></h1>
-<%-- 			<c:if test="${empty sessionScope.id }"> --%>
-<%-- 			<c:redirect>"${pageContext.request.contextPath }/index.jsp"</c:redirect> --%>
-<%-- 			</c:if> --%>
-			<i class="icon-remove menu-close"></i>
-			<a href="${pageContext.request.contextPath }/index.jsp" class="smoothScroll">Home</a>
-			<c:choose>
-				<c:when test="${empty sessionScope.id }">
-			<a href="${pageContext.request.contextPath }/member/agree.do#agree" class="smoothScroll">Join </a>
-			<a href="${pageContext.request.contextPath }/member/login.do#login" class="smoothScroll">Login</a>
-				</c:when>
-				<c:when test="${not empty sessionScope.id && sessionScope.grade=='H'}">
-			<a href="${pageContext.request.contextPath }/member/read.do" class="smoothScroll">MyInfo</a>
-<%-- 			<a href="${pageContext.request.contextPath }/member/update.do" class="smoothScroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Edit</a> --%>
-			<a href="${pageContext.request.contextPath }/member/delete.do" class="smoothScroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Withdrawal</a>
-			<a href="${pageContext.request.contextPath }/member/logout.do" class="smoothScroll">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
-				</c:when>
-			</c:choose>
-			<c:if test="${not empty sessionScope.id && sessionScope.grade=='A'}">
-			<a href="${pageContext.request.contextPath }/member/logout.do">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Logout</a>
-			<a href="${pageContext.request.contextPath }/admin/list.do" id="admin">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Member list</a>
-			</c:if>
-			
-			<a href="${pageContext.request.contextPath }/memo/list.do#list" class="smoothScroll">Memo</a>
-<%-- 			<a href="${pageContext.request.contextPath }/memo/create.do#create" class="smoothScroll">메모등록</a> --%>
-			<a href="${pageContext.request.contextPath }/address/list.do#list" class="smoothScroll">Address</a>
-<%-- 			<a href="${pageContext.request.contextPath }/address/create.do#create" class="smoothScroll">주소생성</a> --%>
-			<a href="${pageContext.request.contextPath }/bbs/list.do#list" class="smoothScroll">Board</a>
-<%-- 			<a href="${pageContext.request.contextPath }/bbs/create.do#create" class="smoothScroll">게시판등록</a> --%>
-			<a href="${pageContext.request.contextPath }/team/list.do#list" class="smoothScroll">Team</a>
-<%-- 			<a href="${pageContext.request.contextPath }/team/create.do#create" class="smoothScroll">팀생성</a> --%>
-			<a href="${pageContext.request.contextPath }/imgbbs/list.do#list" class="smoothScroll">Image</a>
-<%-- 			<a href="${pageContext.request.contextPath }/imgbbs/create.do#create" class="smoothScroll">이미지등록</a> --%>
-			<a href="#"><i class="icon-facebook"></i></a>
-			<a href="#"><i class="icon-twitter"></i></a>
-			<a href="#"><i class="icon-dribbble"></i></a>
-			<a href="#"><i class="icon-envelope"></i></a>
+			</div>
 		</div>
-		
-		<!-- Menu button -->
-		<div id="menuToggle"><i class="icon-reorder"></i></div>
-	</nav>
 
+		<!-- Sidebar -->
+		<div id="sidebar">
+			<div class="inner">
 
-	
-	<!-- ========== HEADER SECTION ========== -->
-	<section id="home" name="home"></section>
-	<div id="headerwrap">
-		<div class="container">
-			<br>
-			<h1>Jiwon`s</h1>
-			<h2>Homepage</h2>
-			<div class="row">
-				<br>
-				<br>
-				<br>
-				<div class="col-lg-6 col-lg-offset-3">
-				</div>
+				<!-- Search -->
+				<section id="search" class="alt">
+					<form method="post" action="#">
+						<input type="text" name="query" id="query" placeholder="Search" />
+					</form>
+				</section>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<header class="major">
+						<h2>Menu</h2>
+					</header>
+					<ul>
+						<li><a href="${pageContext.request.contextPath }/index.jsp">Homepage</a></li>
+						<li><a href="${pageContext.request.contextPath }/member/agree.do">Join</a></li>
+						<li><a href="${pageContext.request.contextPath }/member/login.do">Login</a></li>
+						<li><span class="opener">Info</span>
+							<ul>
+								<li><a href="${pageContext.request.contextPath }/member/read.do">MyInfo</a></li>
+								<li><a href="${pageContext.request.contextPath }/member/update.do">Edit</a></li>
+								<li><a href="${pageContext.request.contextPath }/member/delete.do">Withdrawal</a></li>
+								<li><a href="${pageContext.request.contextPath }/member/logout.do">Logout</a></li>
+								<li><a href="${pageContext.request.contextPath }/admin/list.do" id="admin">Member</a></li>
+								<li><a href="${pageContext.request.contextPath }/member/logout.do">Logout</a></li>
+							</ul></li>
+						<li><span class="opener">Memo</span>
+							<ul>
+								<li><a href="${pageContext.request.contextPath }/memo/list.do">memo list</a></li>
+								<li><a href="${pageContext.request.contextPath }/memo/create.do">memo enroll</a></li>
+							</ul></li>
+						<li><span class="opener">Another Submenu</span>
+							<ul>
+								<li><a href="#">Lorem Dolor</a></li>
+							</ul></li>
+						<li><span class="opener">Another Submenu</span>
+							<ul>
+								<li><a href="#">Lorem Dolor</a></li>
+							</ul></li>
+					</ul>
+				</nav>
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Ante interdum</h2>
+					</header>
+					<div class="mini-posts">
+						<article>
+							<a href="#" class="image"><img src="images/pic07.jpg" alt="" /></a>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore aliquam.</p>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic08.jpg" alt="" /></a>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore aliquam.</p>
+						</article>
+						<article>
+							<a href="#" class="image"><img src="images/pic09.jpg" alt="" /></a>
+							<p>Aenean ornare velit lacus, ac varius enim lorem
+								ullamcorper dolore aliquam.</p>
+						</article>
+					</div>
+					<ul class="actions">
+						<li><a href="#" class="button">More</a></li>
+					</ul>
+				</section>
+
+				<!-- Section -->
+				<section>
+					<header class="major">
+						<h2>Get in touch</h2>
+					</header>
+					<p>Sed varius enim lorem ullamcorper dolore aliquam aenean
+						ornare velit lacus, ac varius enim lorem ullamcorper dolore. Proin
+						sed aliquam facilisis ante interdum. Sed nulla amet lorem feugiat
+						tempus aliquam.</p>
+					<ul class="contact">
+						<li class="fa-envelope-o"><a href="#">information@untitled.tld</a></li>
+						<li class="fa-phone">(000) 000-0000</li>
+						<li class="fa-home">1234 Somewhere Road #8254<br />
+							Nashville, TN 00000-0000
+						</li>
+					</ul>
+				</section>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<p class="copyright">
+						&copy; Untitled. All rights reserved. Demo Images: <a
+							href="https://unsplash.com">Unsplash</a>. Design: <a
+							href="https://html5up.net">HTML5 UP</a>.
+					</p>
+				</footer>
+
 			</div>
-		</div><!-- /container -->
-	</div><!-- /headerwrap -->
-	
-	
-	<!-- ========== WHITE SECTION ========== -->
-	<div id="w">
-		<div class="container">
-			<div class="row">
-				<div class="col-lg-8 col-lg-offset-2">
-				<h3>WELCOME TO <bold>JIWON`S</bold>. HOMEPAGE</br><bold>BE HAPPY</bold>AND 
-				<bold>SMILE</bold>. <br/><bold>PORTFOLIO</bold>.</h3>
-				</div>
-			</div>
-		</div><!-- /container -->
-	</div><!-- /w -->
-	
-	<!-- ========== SERVICES - GREY SECTION ========== -->
-	<!-- 내용 시작 -->
-<!-- 	<div style="width: 100%; padding-top: 10px;"> -->
+		</div>
 
+	</div>
+	<!-- Scripts -->
+	<script src="${pageContext.request.contextPath }/assets/js/jquery.min.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/skel.min.js"></script>
+	<script src="${pageContext.request.contextPath }/assets/js/util.js"></script>
+	<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+	<script src="${pageContext.request.contextPath }/assets/js/main.js"></script>
+</body>
+</html>
